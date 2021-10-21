@@ -31,6 +31,11 @@ yea, im calling 95% of every developer out there. the only ones i seen being con
 been loving what she writes, and i think that's pretty neat. i could do that, but let's be honest. if we want to be known for our work,
 we have to repeat everything everyone does! (i could be joking, i dont know.)
 
+also, you could say i was inspired to write one. i did this as a joke + to jot down some feelings, i been loving [amy's blog](https://b.amy.gg), the topics
+she writes is pretty interesting and i love her work, wish i can be that smart, who knows?
+
+---
+
 thanks for reading whatever the fuck i want to, see you next time.
 
 ~ **noel**
