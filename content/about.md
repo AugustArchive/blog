@@ -1,0 +1,36 @@
+---
+title: about me, noel.
+description: some stuff about me and who i am.
+author: Noel (@auguwu; https://floofy.dev)
+
+---
+
+# Who am I?
+im noel. {{age}} year old developer who likes to do code and theater, pretty unique right! i live in arizona with my family :3, going to highschool,
+the perfect teenager dream... right?
+
+no.
+
+## How did you start coding?
+i started coding around febuary 2017 (wow, {{programming:years}} years already?), i learned javascript when i started out using visual studio code, since
+i was around the discord bot/api community, and i wanted to create my own bot! so i did.
+
+fast forward {{programming:years}} years, i am probably going to create a company. pretty sweet huh? probably, i dont know.
+
+## Why do you write in lowercase in everything you write?
+because i want you to know that i am always dead inside.
+
+Just playing, it's because doing everything right is bad. I want to do it my own way, since this is *my* blog, so i'll write how i like, thanks.
+
+## Why did you write a blog?
+because, i wanted to play a joke i had in my head. most developers have blogs, right? what do they have in common?
+
+they don't consistely pump out blog posts.
+
+yea, im calling 95% of every developer out there. the only ones i seen being consistent is a person i know from a community, [Palaiologos](https://github.com/kspalaiologos).
+been loving what she writes, and i think that's pretty neat. i could do that, but let's be honest. if we want to be known for our work,
+we have to repeat everything everyone does! (i could be joking, i dont know.)
+
+thanks for reading whatever the fuck i want to, see you next time.
+
+~ **noel**
