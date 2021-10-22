@@ -6,16 +6,16 @@ author: Noel (@auguwu; https://floofy.dev)
 ---
 
 # Who am I?
-im noel. {{age}} year old developer who likes to do code and theater, pretty unique right! i live in arizona with my family :3, going to highschool,
+im noel. 17 year old developer who likes to do code and theater, pretty unique right! i live in arizona with my family :3, going to highschool,
 the perfect teenager dream... right?
 
 no.
 
 ## How did you start coding?
-i started coding around febuary 2017 (wow, {{programming:years}} years already?), i learned javascript when i started out using visual studio code, since
+i started coding around febuary 2017 (wow, 5 years already?), i learned javascript when i started out using visual studio code, since
 i was around the discord bot/api community, and i wanted to create my own bot! so i did.
 
-fast forward {{programming:years}} years, i am probably going to create a company. pretty sweet huh? probably, i dont know.
+fast forward 5} years, i am probably going to create a company. pretty sweet huh? probably, i dont know.
 
 ## Why do you write in lowercase in everything you write?
 because i want you to know that i am always dead inside.
