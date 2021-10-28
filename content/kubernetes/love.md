@@ -1,6 +1,6 @@
 ---
 title: why i love kubernetes
-description:
+description: blog post on why i love k8s and pros/cons i found.
 author: Noel
 category: kubernetes
 createdAt: 2021-10-28T15:40:54Z
