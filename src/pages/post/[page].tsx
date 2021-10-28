@@ -16,22 +16,64 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import getDocument, { MarkdownDocument } from '../../lib/docs';
-import type { GetStaticProps } from 'next';
+import getDocument, { getAllPages, MarkdownDocument } from '../../lib/docs';
+import type { GetStaticProps, GetStaticPaths } from 'next';
+import slugify from 'slugify';
+import { useRouter } from 'next/router';
 
 interface MainPageProps {
-  document: MarkdownDocument;
+  document?: MarkdownDocument;
 }
 
 export const getStaticProps: GetStaticProps<MainPageProps> = async ({ params }) => {
-  const doc = await getDocument(params![0] as string);
+  const allDocs = await getAllPages();
+  const doc = allDocs.find((bah) => slugify(bah.data.title) === (params!.page as string));
+
   return {
     props: {
-      document: doc,
+      document:
+        doc !== undefined
+          ? {
+              data: {
+                ...doc.data,
+                createdAt: doc.data.createdAt.getTime(),
+              },
+
+              file: doc.file,
+              content: doc.content,
+            }
+          : undefined,
     },
   };
 };
 
+export const getStaticPaths: GetStaticPaths = async () => {
+  const docs = await getAllPages();
+  return {
+    paths: docs.map((s) => ({
+      params: {
+        page: slugify(s.data.title),
+      },
+    })),
+
+    fallback: 'blocking',
+  };
+};
+
 export default function MainPage({ document: doc }: MainPageProps) {
-  return <>{JSON.stringify(doc, null, '\t')}</>;
+  if (doc === undefined) {
+    const router = useRouter();
+
+    return (
+      <>
+        <div className="flex items-center justify-center mx-auto container h-screen">
+          <h1 className="font-jb-mono text-3xl text-black font-bold">
+            Couldn't find blog post "{router.asPath.replace('/post/', '').replace('/', '')}". Are you lost?
+          </h1>
+        </div>
+      </>
+    );
+  }
+
+  return <>{JSON.stringify(doc, null, 4)}</>;
 }

@@ -28,6 +28,7 @@ import xss from 'xss';
 export interface MarkdownDocument {
   data: Record<string, any>;
   content: string;
+  file: string;
 }
 
 const cache = new LRUCache<string, MarkdownDocument>({
@@ -37,6 +38,15 @@ const cache = new LRUCache<string, MarkdownDocument>({
 let highlighter!: Highlighter;
 
 export const getAllPages = async () => {
+  // if it's cached, let's just return that
+  // lru-cache, please add `toArray()` and `isEmpty()` methods AAAAAAAAAAAAAAAAAAAA
+  if (cache.keys().length !== 0) {
+    const cached: MarkdownDocument[] = [];
+    cache.forEach((c) => cached.push(c));
+
+    return cached;
+  }
+
   // if there is no highlighter,
   // let's create a instance!
   if (!highlighter) {
@@ -76,6 +86,7 @@ export const getAllPages = async () => {
     pages.push({
       data,
       content: xssContent,
+      file: files[i],
     });
   }
 
@@ -84,7 +95,6 @@ export const getAllPages = async () => {
 };
 
 const docs = async (page: string) => {
-  // if the key exists, skip
   if (cache.has(page)) return cache.get(page)!;
 
   // if there is no highlighter,
@@ -121,11 +131,13 @@ const docs = async (page: string) => {
   cache.set(page, {
     data,
     content: xssContent,
+    file: join(process.cwd(), 'content', `${page}.md`),
   });
 
   return {
     data,
     content: xssContent,
+    file: join(process.cwd(), 'content', `${page}.md`),
   };
 };
 

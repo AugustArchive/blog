@@ -16,13 +16,21 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
+import { faDiscord, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { getAllPages, MarkdownDocument } from '../lib/docs';
 import type { GetStaticProps } from 'next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { DateTime } from 'luxon';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import slugify from 'slugify';
+import Image from 'next/image';
 
 interface MainPageProps {
   documents: MarkdownDocument[];
 }
 
+library.add(faDiscord, faGithub, faTwitter, faCalendar);
 export const getStaticProps: GetStaticProps<MainPageProps> = async () => {
   const documents = await getAllPages();
   return {
@@ -40,5 +48,41 @@ export const getStaticProps: GetStaticProps<MainPageProps> = async () => {
 };
 
 export default function MainPage({ documents }: MainPageProps) {
-  return <>{JSON.stringify(documents, null, '\t')}</>;
+  return (
+    <>
+      <div className="flex container mx-auto items-center justify-center text-white mt-6 flex-col">
+        <Image src="/icon.png" width="175px" height="175px" className="rounded-[50%] block m-auto" draggable="false" />
+        <h1 className="text-black font-cantarell font-semibold text-xl lg:text-3xl mt-2">Noel's Blog</h1>
+        <h2 className="text-black font-inter font-medium text-lg lg:text-2xl mt-2 w-[50%] break-words text-center">
+          Welcome to my blog. Enjoy your stay. While you're here, might recommend reading the last 10 blog posts?
+        </h2>
+      </div>
+
+      <div className="flex flex-col mx-auto container items-center justify-center mt-3">
+        {documents.slice(0, 10).map((doc) => (
+          <article
+            className="bg-gray-700 shadow-md rounded-md text-white w-[54.6%] lg:w-[45.6%] mb-5"
+            key={`article-${slugify(doc.data.title)}`}
+          >
+            <div className="flex flex-col justify-center p-3">
+              <h2 className="text-white font-inter font-semibold text-lg lg:text-2xl">
+                <a className="text-white" href={`/post/${slugify(doc.data.title)}`}>
+                  {doc.data.title}
+                </a>
+              </h2>
+            </div>
+
+            <footer className="flex items-center p-3">
+              <div>
+                <FontAwesomeIcon icon={['fas', 'calendar']} />
+                <span className="pl-2">
+                  {DateTime.fromMillis(doc.data.createdAt, { zone: 'America/Phoenix' }).toFormat('DDD ttt')}
+                </span>
+              </div>
+            </footer>
+          </article>
+        ))}
+      </div>
+    </>
+  );
 }

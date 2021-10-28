@@ -1,5 +1,5 @@
 ---
-title: about me, noel.
+title: about me, noel
 description: some stuff about me and who i am.
 author: Noel
 createdAt: 2021-10-28T01:17:39.888Z

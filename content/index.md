@@ -1,5 +1,5 @@
 ---
-title: welcome! 🌺
+title: welcome 🌺
 description: welcome to this blog.
 author: Noel
 createdAt: 2021-10-28T01:17:39.888Z
