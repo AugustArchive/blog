@@ -1,0 +1,5 @@
+User-agent: *
+
+# Allow Discord to scrape
+User-agent: Discordbot
+Allow: /

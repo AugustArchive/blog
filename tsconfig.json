@@ -2,19 +2,21 @@
   "extends": "@augu/tsconfig/dom.json",
   "compilerOptions": {
     "resolveJsonModule": true,
+    "isolatedModules": true,
     "moduleResolution": "node",
-    "esModuleInterop": true,
+    "skipLibCheck": true,
     "allowJs": true,
-    "sourceMap": true,
-    "strict": true,
+    "module": "ESNext",
     "noEmit": true,
-    "baseUrl": ".",
-    "typeRoots": ["src/@types", "./node_modules/@types"],
-    "types": ["node", "@nuxt/types", "@nuxtjs/pwa/dist/pwa"],
-    "paths": {
-      "~/*": ["./src/*"],
-      "@/*": ["./src/*"]
-    }
+    "jsx": "preserve",
+    "incremental": true
   },
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

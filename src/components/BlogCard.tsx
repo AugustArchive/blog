@@ -16,32 +16,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-/**
- * Tailwind configuration for b.floof.gay
- */
-module.exports = {
-  purge: ['./src/components/**.{ts,tsx}', './src/pages/**.{ts,tsx}'],
-  darkMode: 'media', // or 'media' or 'class'
-  mode: 'jit',
-  theme: {
-    extend: {
-      colors: {
-        discord: '#7289DA',
-        github: '#333333',
-        twitter: '#1DA1F2',
-        telegram: '#0088CC',
-        steam: '#000000',
-      },
-
-      fontFamily: {
-        'jb-mono': ['"JetBrains Mono"', 'monospace'],
-        cantarell: ['Cantarell', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
-      },
-    },
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [require('@tailwindcss/typography')],
-};
+export default function BlogCard() {
+  return <></>;
+}
