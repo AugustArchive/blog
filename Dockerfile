@@ -1,4 +1,4 @@
-FROM node:17-alpine AS builder
+FROM node:17-alpine
 
 LABEL MAINTAINER="Noel <cutie@floofy.dev>"
 RUN apk update && apk add --no-cache git ca-certificates make gcc g++ bash
@@ -6,15 +6,9 @@ RUN apk update && apk add --no-cache git ca-certificates make gcc g++ bash
 WORKDIR /app
 COPY . .
 RUN yarn global add typescript eslint
-RUN NUXT_TELEMETRY_DISABLED=1 yarn build
+
+# https://github.com/webpack/webpack/issues/14532
+RUN NEXT_TELEMETRY_DISABLED=1 NODE_OPTIONS=--openssl-legacy-provider NODE_ENV=production yarn build
 RUN yarn cache clean
 
-FROM node:17-alpine
-
-WORKDIR /app/floof/blog
-COPY --from=builder /app/node_modules /app/floof/blog/node_modules
-COPY --from=builder /app/.nuxt /app/floof/blog/.nuxt
-COPY docker /app/floof/blog/docker
-RUN chmod +x ./docker/start.sh
-
-ENTRYPOINT [ "sh", "./docker/start.sh" ]
+CMD [ "yarn", "start" ]
