@@ -90,20 +90,14 @@ export default function MainPage({ document: doc }: MainPageProps) {
         <meta property="og:url" content="https://b.floof.gay" />
       </Head>
 
-      <article className="prose" dangerouslySetInnerHTML={{ __html: doc.content }} />
-      {/* <div className="mt-8 mx-auto prose flex container flex-col justify-center items-center">
-        <h1>hi world.</h1>
-        <h2>pleading face????</h2>
-      </div> */}
+      <main className="flex flex-col mt-8 justify-center items-center">
+        <header className="text-center">
+          <h1 className="text-3xl font-semibold">{doc.data.title}</h1>
+          <h2 className="text-lg font-medium">{doc.data.description}</h2>
+        </header>
+
+        <article className="prose mt-6 mx-auto" dangerouslySetInnerHTML={{ __html: doc.content }} />
+      </main>
     </>
   );
 }
-
-/*
-      <article
-        className="prose max-w-prose"
-        dangerouslySetInnerHTML={{
-          __html: doc.content,
-        }}
-      />
-*/
