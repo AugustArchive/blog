@@ -24,7 +24,7 @@ jobs:
           mkdir ~/.kube
           echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
       - name: Set image
-        run: kubectl set image deployment/blog blog=registry.floofy.dev/auguwu/blog:${{github.sha}}
+        run: kubectl set image deployment/blog noel-blog=registry.floofy.dev/auguwu/blog:${{github.sha}}
 
       - name: Deploy!
         run: kubectl rollout status deployment/blog
