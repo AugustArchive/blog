@@ -22,8 +22,8 @@ import { readdir } from '@augu/utils';
 import graymatter from 'gray-matter';
 import LRUCache from 'lru-cache';
 import { join } from 'path';
-import marked from 'marked';
-import xss from 'xss';
+import marked, { Tokenizer } from 'marked';
+import { resourceLimits } from 'worker_threads';
 
 export interface MarkdownDocument {
   data: Record<string, any>;
@@ -36,6 +36,19 @@ const cache = new LRUCache<string, MarkdownDocument>({
 });
 
 let highlighter!: Highlighter;
+
+const escapeHtml = (text: string) =>
+  text.replace(
+    /[&<>"']/g,
+    (match) =>
+      ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;',
+      }[match as never])
+  );
 
 export const getAllPages = async () => {
   // if it's cached, let's just return that
@@ -81,11 +94,9 @@ export const getAllPages = async () => {
       gfm: true,
     });
 
-    const xssContent = xss(mdContent);
-
     pages.push({
       data,
-      content: xssContent,
+      content: mdContent,
       file: files[i],
     });
   }
@@ -114,7 +125,7 @@ const docs = async (page: string) => {
   marked.use({
     renderer: {
       code(code, lang) {
-        return highlighter.codeToHtml(code, lang);
+        return highlighter.codeToHtml(code, lang, 'nord');
       },
     },
 
@@ -127,16 +138,15 @@ const docs = async (page: string) => {
     gfm: true,
   });
 
-  const xssContent = xss(mdContent);
   cache.set(page, {
     data,
-    content: xssContent,
+    content: mdContent,
     file: join(process.cwd(), 'content', `${page}.md`),
   });
 
   return {
     data,
-    content: xssContent,
+    content: mdContent,
     file: join(process.cwd(), 'content', `${page}.md`),
   };
 };

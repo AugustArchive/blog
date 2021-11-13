@@ -10,6 +10,6 @@ i have to say, but it is worth a shot, right?
 
 massive warning: i swear. a lot. (when I'm not serious)
 
-this site is made with tailwind and nuxt/vue.js! don't like what i chose? i don't fucking care! i'll choose what i want damn it.
+this site is made with tailwind and next.js! don't like what i chose? i don't fucking care! i'll choose what i want damn it.
 
 thanks for visiting, more content up soon? :eyes:

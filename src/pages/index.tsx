@@ -42,6 +42,7 @@ export const getStaticProps: GetStaticProps<MainPageProps> = async () => {
         },
 
         content: s.content,
+        file: s.file,
       })),
     },
   };
@@ -52,8 +53,8 @@ export default function MainPage({ documents }: MainPageProps) {
     <>
       <div className="flex container mx-auto items-center justify-center text-white mt-6 flex-col">
         <Image src="/icon.png" width="175px" height="175px" className="rounded-[50%] block m-auto" draggable="false" />
-        <h1 className="text-black font-cantarell font-semibold text-xl lg:text-3xl mt-2">Noel's Blog</h1>
-        <h2 className="text-black font-inter font-medium text-lg lg:text-2xl mt-2 w-[50%] break-words text-center">
+        <h1 className="text-white font-cantarell font-semibold text-xl lg:text-3xl mt-2">Noel's Blog</h1>
+        <h2 className="text-white font-inter font-medium text-lg lg:text-2xl mt-2 w-[67.9%] break-words text-center">
           Welcome to my blog. Enjoy your stay. While you're here, might recommend reading the last 10 blog posts?
         </h2>
       </div>
@@ -62,17 +63,17 @@ export default function MainPage({ documents }: MainPageProps) {
         {documents.slice(0, 10).map((doc) => (
           <article
             className="bg-gray-700 shadow-md rounded-md text-white w-[54.6%] lg:w-[45.6%] mb-5"
-            key={`article-${slugify(doc.data.title)}`}
+            key={`article-${slugify(doc.data.title).toLowerCase()}`}
           >
             <div className="flex flex-col justify-center p-3">
               <h2 className="text-white font-inter font-semibold text-lg lg:text-2xl">
-                <a className="text-white" href={`/post/${slugify(doc.data.title)}`}>
+                <a className="text-white" href={`/post/${slugify(doc.data.title).toLowerCase()}`}>
                   {doc.data.title}
                 </a>
               </h2>
             </div>
 
-            <footer className="flex items-center p-3">
+            <footer className="flex items-center p-2">
               <div>
                 <FontAwesomeIcon icon={['fas', 'calendar']} />
                 <span className="pl-2">

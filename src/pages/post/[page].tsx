@@ -16,18 +16,22 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import getDocument, { getAllPages, MarkdownDocument } from '../../lib/docs';
 import type { GetStaticProps, GetStaticPaths } from 'next';
-import slugify from 'slugify';
+import { getAllPages, MarkdownDocument } from '../../lib/docs';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRouter } from 'next/router';
+import { DateTime } from 'luxon';
+import slugify from 'slugify';
+import Image from 'next/image';
+import Head from 'next/head';
 
 interface MainPageProps {
-  document?: MarkdownDocument;
+  document: MarkdownDocument | null;
 }
 
 export const getStaticProps: GetStaticProps<MainPageProps> = async ({ params }) => {
   const allDocs = await getAllPages();
-  const doc = allDocs.find((bah) => slugify(bah.data.title) === (params!.page as string));
+  const doc = allDocs.find((bah) => slugify(bah.data.title).toLowerCase() === (params!.page as string).toLowerCase());
 
   return {
     props: {
@@ -42,7 +46,7 @@ export const getStaticProps: GetStaticProps<MainPageProps> = async ({ params }) 
               file: doc.file,
               content: doc.content,
             }
-          : undefined,
+          : null,
     },
   };
 };
@@ -52,7 +56,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: docs.map((s) => ({
       params: {
-        page: slugify(s.data.title),
+        page: slugify(s.data.title).toLowerCase(),
       },
     })),
 
@@ -61,7 +65,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export default function MainPage({ document: doc }: MainPageProps) {
-  if (doc === undefined) {
+  if (doc === null) {
     const router = useRouter();
 
     return (
@@ -75,5 +79,31 @@ export default function MainPage({ document: doc }: MainPageProps) {
     );
   }
 
-  return <>{JSON.stringify(doc, null, 4)}</>;
+  return (
+    <>
+      <Head>
+        <meta name="description" content="🌌 noel's blog - to jot down feelings." />
+        <meta name="theme-color" content="#E2A8CA" />
+        <meta property="og:description" content={doc.data.description} />
+        <meta property="og:title" content={`noel's blog 💜 | ${doc.data.title}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://b.floof.gay" />
+      </Head>
+
+      <article className="prose" dangerouslySetInnerHTML={{ __html: doc.content }} />
+      {/* <div className="mt-8 mx-auto prose flex container flex-col justify-center items-center">
+        <h1>hi world.</h1>
+        <h2>pleading face????</h2>
+      </div> */}
+    </>
+  );
 }
+
+/*
+      <article
+        className="prose max-w-prose"
+        dangerouslySetInnerHTML={{
+          __html: doc.content,
+        }}
+      />
+*/

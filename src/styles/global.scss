@@ -16,48 +16,23 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-@import '@fontsource/jetbrains-mono/index.css';
-@import '@fontsource/cantarell/index.css';
-@import '@fontsource/inter/index.css';
+// @import '@fontsource/jetbrains-mono/index.css';
+// @import '@fontsource/cantarell/index.css';
+// @import '@fontsource/inter/index.css';
 
-@tailwind components;
 @tailwind base;
+@tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
-html {
-  min-height: 100%;
-}
+// html {
+//   min-height: 100%;
+// }
 
-body {
-  font-family: 'Inter', sans-serif;
-  height: 100%;
-}
-
-/* fix hyperlinks */
-a {
-  color: black;
-}
-
-a:link {
-  text-decoration: none;
-  color: white;
-}
-
-a:hover {
-  text-decoration: none;
-  color: white;
-}
-
-a:active {
-  text-decoration: none;
-  color: white;
-}
-
-a:visited {
-  text-decoration: none;
-  color: white;
-}
+// body {
+//   font-family: 'Inter', sans-serif;
+//   height: 100%;
+// }
