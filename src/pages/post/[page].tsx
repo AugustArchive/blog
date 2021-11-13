@@ -80,22 +80,26 @@ export default function MainPage({ document: doc }: MainPageProps) {
   }
 
   return (
-    <main className="flex flex-col mt-8 justify-center items-center">
+    <main className="flex flex-col justify-center items-center">
       <Head>
+        <title>🌌 {doc.data.title}</title>
         <meta name="description" content="🌌 noel's blog - to jot down feelings." />
         <meta name="theme-color" content="#E2A8CA" />
         <meta property="og:description" content={doc.data.description} />
-        <meta property="og:title" content={`noel's blog 💜 | ${doc.data.title}`} />
+        <meta property="og:title" content={`💜 ${doc.data.title}`} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://b.floof.gay" />
       </Head>
 
-      <header className="text-center">
+      <header className="text-center mt-6">
         <h1 className="text-3xl font-semibold">{doc.data.title}</h1>
         <h2 className="text-lg font-medium">{doc.data.description}</h2>
       </header>
 
-      <article className="prose mt-6 mx-auto" dangerouslySetInnerHTML={{ __html: doc.content }} />
+      <article
+        className="prose lg:prose-lg sm:prose-sm xl:prose-xl 2xl:prose-2xl mt-6 mx-auto"
+        dangerouslySetInnerHTML={{ __html: doc.content }}
+      />
     </main>
   );
 }

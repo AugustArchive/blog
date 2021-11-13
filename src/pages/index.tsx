@@ -62,7 +62,7 @@ export default function MainPage({ documents }: MainPageProps) {
       <div className="flex flex-col mx-auto container items-center justify-center mt-3">
         {documents.slice(0, 10).map((doc) => (
           <article className="blog-card" key={`article-${slugify(doc.data.title).toLowerCase()}`}>
-            <div className="flex flex-col justify-center p-3">
+            <div className="flex flex-col justify-center p-2 lg:p-3">
               <h2 className="text-white font-inter font-semibold text-lg lg:text-2xl">
                 <a href={`/post/${slugify(doc.data.title).toLowerCase()}`}>{doc.data.title}</a>
               </h2>

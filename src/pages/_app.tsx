@@ -26,6 +26,12 @@ export default function PawApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>🌌 noel's blog</title>
+        <meta name="description" content="🌌 noel's blog - to jot down feelings." />
+        <meta name="theme-color" content="#E2A8CA" />
+        <meta property="og:description" content="🌌 welcome to noel's blog. enjoy your stay! ~ヾ(・ω・)" />
+        <meta property="og:title" content="noel's blog 💜" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://b.floof.gay" />
       </Head>
 
       <Component {...pageProps} />

@@ -47,12 +47,6 @@ export default class PawDocument extends Document {
           <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
           <link rel="manifest" href="/manifest.json" />
           <meta charSet="UTF-8" />
-          <meta name="description" content="🌌 noel's blog - to jot down feelings." />
-          <meta name="theme-color" content="#E2A8CA" />
-          <meta property="og:description" content="🌌 welcome to noel's blog. enjoy your stay! ~ヾ(・ω・)" />
-          <meta property="og:title" content="noel's blog 💜" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://b.floof.gay" />
         </Head>
 
         <body>
