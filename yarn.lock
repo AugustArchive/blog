@@ -4092,10 +4092,10 @@ map-obj@^4.0.0:
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-4.3.0.tgz#9304f906e93faae70880da102a9f1df0ea8bb05a"
   integrity sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==
 
-marked@4.0.3:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.3.tgz#986760a428d8fd666251ec578429bf9a239a34bc"
-  integrity sha512-vSwKKtw+lCA0uFK/02JT4tBfNxEREpoTg21NoXqcmX0ySBIEyLMYWmt8WPsM61QNFaDBZkggupyNXLsV7uPuRg==
+marked@4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.4.tgz#d7cb16adaa474291307c521824c5716d32b95c36"
+  integrity sha512-d8v7SensuOj+gxi0TGbqb2WtS60ycZfZuqtmAB9yz0JLotKerTob/47Qk9oLCDmn5G1dcdn3d5ydR+ih9dvS0A==
 
 mathml-tag-names@^2.1.3:
   version "2.1.3"
