@@ -36,7 +36,7 @@
     "react-dom": "17.0.2",
     "sass": "1.43.5",
     "sharp": "0.29.3",
-    "shiki": "0.9.12",
+    "shiki": "0.9.13",
     "slugify": "1.6.3",
     "tailwindcss": "2.2.19",
     "twemoji": "13.1.0",
