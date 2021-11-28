@@ -97,7 +97,7 @@ export default function MainPage({ document: doc }: MainPageProps) {
       </header>
 
       <article
-        className="prose lg:prose-lg sm:prose-sm xl:prose-xl 2xl:prose-2xl mt-6 mx-auto"
+        className="prose lg:prose-lg sm:prose-sm xl:prose-xl 2xl:prose-2xl mt-6 space-y-4 px-4 py-2"
         dangerouslySetInnerHTML={{ __html: doc.content }}
       />
     </main>

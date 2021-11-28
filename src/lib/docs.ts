@@ -19,11 +19,10 @@
 import { Highlighter, getHighlighter } from 'shiki';
 import { readFile } from 'fs/promises';
 import { readdir } from '@augu/utils';
+import { marked } from 'marked';
 import graymatter from 'gray-matter';
 import LRUCache from 'lru-cache';
 import { join } from 'path';
-import marked, { Tokenizer } from 'marked';
-import { resourceLimits } from 'worker_threads';
 
 export interface MarkdownDocument {
   data: Record<string, any>;
@@ -36,19 +35,6 @@ const cache = new LRUCache<string, MarkdownDocument>({
 });
 
 let highlighter!: Highlighter;
-
-const escapeHtml = (text: string) =>
-  text.replace(
-    /[&<>"']/g,
-    (match) =>
-      ({
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#039;',
-      }[match as never])
-  );
 
 export const getAllPages = async () => {
   // if it's cached, let's just return that
@@ -81,7 +67,7 @@ export const getAllPages = async () => {
     marked.use({
       renderer: {
         code(code, lang) {
-          return highlighter.codeToHtml(code, lang);
+          return highlighter.codeToHtml(code, lang, 'nord');
         },
       },
 
