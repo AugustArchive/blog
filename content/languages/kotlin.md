@@ -37,7 +37,7 @@ that might be useful (to me and probably others):
 
 - dynamic tags
 - `@examples` and `@inheritdoc` tags
-- dark theme
+- ~~dark theme~~ - added in 1.6
 - custom way to build your own theme(s) and ship them to Maven Central
 
 Just take a good look at the standard library and the kotlinx libraries.
@@ -63,13 +63,14 @@ One thing that kind of bugs me is with IntelliJ mentioning that this:
 public static void whatever(@Nullable String a) {}
 ```
 
-would be in Kotlin (from autocomplete):
+would be in Kotlin (converted from Java):
 
 ```kotlin
 fun whatever(a: String) {}
 ```
 
-I would wish Kotlin (or IntelliJ) would mention that parameter `a` in that block of Java code would be `fun whatever(a: String?) {}`.
+I would wish Kotlin (or IntelliJ) would mention that parameter `a` in that block of Java code would be `fun whatever(a: String?) {}` instead of `a: String!`,
+makes it kind of hard to see if it's nullable unless you hover over and see the `@Nullable` annotation.
 
 ---
 
