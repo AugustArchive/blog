@@ -29,7 +29,7 @@
     "gray-matter": "4.0.3",
     "lru-cache": "6.0.0",
     "luxon": "2.1.1",
-    "marked": "4.0.6",
+    "marked": "4.0.7",
     "next": "12.0.7",
     "next-pwa": "5.4.4",
     "react": "17.0.2",
