@@ -18,11 +18,8 @@
 
 import type { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllPages, MarkdownDocument } from '../../lib/docs';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRouter } from 'next/router';
-import { DateTime } from 'luxon';
 import slugify from 'slugify';
-import Image from 'next/image';
 import Head from 'next/head';
 
 interface MainPageProps {

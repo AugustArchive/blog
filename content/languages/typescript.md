@@ -3,7 +3,6 @@ title: Why I love TypeScript
 description: Why you should use TypeScript in your daily work
 createdAt: 2021-11-09T17:09:18.330Z
 author: Noel
-
 ---
 
 Hey, this is a blog post on why I love TypeScript and you should use it. Do note that I am not forcing anyone to learn something they aren't comfortable

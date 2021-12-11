@@ -9,11 +9,14 @@
   "repository": "https://github.com/auguwu/blog",
   "bugs": "https://github.com/auguwu/blog",
   "scripts": {
+    "lint:scss": "stylelint src/**/*.scss --customSyntax postcss-scss",
+    "build:ci": "tsc --noEmit",
+    "lint:ci": "eslint src --ext .ts,.tsx",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src --ext .ts,.vue --fix",
+    "lint": "eslint src --ext .ts,.tsx --fix && yarn fmt && yarn lint:scss",
     "fmt": "prettier --config ./.prettierrc.json --write .",
-    "dev": "next dev -p 3621"
+    "dev": "yarn lint && next dev -p 3621"
   },
   "dependencies": {
     "@augu/utils": "1.5.6",
@@ -32,6 +35,7 @@
     "marked": "4.0.7",
     "next": "12.0.7",
     "next-pwa": "5.4.4",
+    "postcss-scss": "4.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "sass": "1.45.0",

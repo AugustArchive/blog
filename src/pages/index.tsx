@@ -25,6 +25,7 @@ import { DateTime } from 'luxon';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import slugify from 'slugify';
 import Image from 'next/image';
+import Head from 'next/head';
 
 interface MainPageProps {
   documents: MarkdownDocument[];
@@ -51,6 +52,16 @@ export const getStaticProps: GetStaticProps<MainPageProps> = async () => {
 export default function MainPage({ documents }: MainPageProps) {
   return (
     <>
+      <Head>
+        <title>🌌 noel's blog</title>
+        <meta name="description" content="🌌 noel's blog - to jot down feelings." />
+        <meta name="theme-color" content="#E2A8CA" />
+        <meta property="og:description" content="🌌 welcome to noel's blog. enjoy your stay! ~ヾ(・ω・)" />
+        <meta property="og:title" content="noel's blog 💜" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://b.floof.gay" />
+      </Head>
+
       <div className="flex container mx-auto items-center justify-center  mt-6 flex-col">
         <Image src="/icon.png" width="175px" height="175px" className="avatar" draggable="false" />
         <h1 className="font-cantarell font-semibold text-xl lg:text-3xl mt-2">Noel's Blog</h1>

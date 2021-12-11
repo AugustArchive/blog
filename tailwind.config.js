@@ -22,20 +22,8 @@ const defaultTheme = require('tailwindcss/defaultTheme');
  * Tailwind configuration for b.floof.gay
  */
 module.exports = {
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: ['./src/components/**.{ts,tsx}', './src/pages/**.{ts,tsx}'],
-    options: {
-      safelist: [/prose$/],
-    },
-  },
-
+  content: ['./src/components/**/*.{ts,tsx}', './src/pages/**/*.{ts,tsx}'],
   darkMode: 'media', // or 'media' or 'class'
-
-  // Typography breaks when using the JIT compiler
-  // TODO: remove this when JIT is in a "good state".
-  // mode: 'jit',
-
   theme: {
     extend: {
       fontFamily: {
