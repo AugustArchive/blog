@@ -1,6 +1,6 @@
-/**
+/*
  * 🌌 @noel/blog: a blog to jot down feelings, i guess.
- * Copyright (c) 2021 Noel <cutie@floofy.dev>
+ * Copyright (c) 2021-2022 Noel <cutie@floofy.dev>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -49,7 +49,7 @@ export default class PawDocument extends Document {
           <meta charSet="UTF-8" />
         </Head>
 
-        <body>
+        <body className="min-h-full w-full dark:bg-gray-900 bg-gray-200">
           <Main />
           <NextScript />
         </body>

@@ -16,9 +16,26 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import type { AppProps } from 'next/app';
-import '../styles/global.scss';
+import { Switch as HSwitch } from '@headlessui/react';
+import { useState } from 'react';
 
-export default function PawApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+interface SwitchProps {
+  message: string;
 }
+
+const Switch: React.FC<SwitchProps> = ({ message }) => {
+  const [enabled, setEnabled] = useState(false);
+
+  return (
+    <HSwitch checked={enabled} onChange={setEnabled}>
+      <span className="sr-only">{message}</span>
+      <span
+        className={`${
+          enabled ? 'translate-x-6' : 'translate-x-1'
+        } inline-block w-4 h-4 transform bg-white rounded-full`}
+      />
+    </HSwitch>
+  );
+};
+
+export default Switch;

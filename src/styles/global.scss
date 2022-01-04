@@ -1,6 +1,6 @@
-/**
+/*
  * 🌌 @noel/blog: a blog to jot down feelings, i guess.
- * Copyright (c) 2021 Noel <cutie@floofy.dev>
+ * Copyright (c) 2021-2022 Noel <cutie@floofy.dev>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

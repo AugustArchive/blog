@@ -1,6 +1,6 @@
-/**
+/*
  * 🌌 @noel/blog: a blog to jot down feelings, i guess.
- * Copyright (c) 2021 Noel <cutie@floofy.dev>
+ * Copyright (c) 2021-2022 Noel <cutie@floofy.dev>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,6 +19,7 @@
 import type { GetStaticProps, GetStaticPaths } from 'next';
 import { getAllPages, MarkdownDocument } from '../../lib/docs';
 import { useRouter } from 'next/router';
+import Markdown from '../../components/Markdown';
 import slugify from 'slugify';
 import Head from 'next/head';
 
@@ -28,7 +29,9 @@ interface MainPageProps {
 
 export const getStaticProps: GetStaticProps<MainPageProps> = async ({ params }) => {
   const allDocs = await getAllPages();
-  const doc = allDocs.find((bah) => slugify(bah.data.title).toLowerCase() === (params!.page as string).toLowerCase());
+  const doc = allDocs.find(
+    (bah) => slugify(bah.data.title).toLowerCase() === (params!.page as string).toLowerCase()
+  );
 
   return {
     props: {
@@ -69,7 +72,8 @@ export default function MainPage({ document: doc }: MainPageProps) {
       <>
         <div className="flex items-center justify-center mx-auto container h-screen">
           <h1 className="font-jb-mono text-3xl text-black font-bold">
-            Couldn't find blog post "{router.asPath.replace('/post/', '').replace('/', '')}". Are you lost?
+            Couldn't find blog post "{router.asPath.replace('/post/', '').replace('/', '')}".
+            Are you lost?
           </h1>
         </div>
       </>
@@ -77,7 +81,7 @@ export default function MainPage({ document: doc }: MainPageProps) {
   }
 
   return (
-    <main className="flex flex-col justify-center items-center">
+    <>
       <Head>
         <title>🌌 {doc.data.title}</title>
         <meta name="description" content="🌌 noel's blog - to jot down feelings." />
@@ -88,15 +92,19 @@ export default function MainPage({ document: doc }: MainPageProps) {
         <meta property="og:url" content="https://b.floof.gay" />
       </Head>
 
-      <header className="text-center mt-6">
-        <h1 className="text-3xl font-semibold">{doc.data.title}</h1>
-        <h2 className="text-lg font-medium">{doc.data.description}</h2>
-      </header>
+      <main className="bg-gray-200 dark:bg-gray-900">
+        <article className="py-12 max-w-6xl mx-auto">
+          <h1 className="text-3xl text-center text-gray-800 dark:text-gray-300">
+            {doc.data.title}
+          </h1>
 
-      <article
-        className="prose lg:prose-lg sm:prose-sm xl:prose-xl 2xl:prose-2xl mt-6 space-y-4 px-4 py-2"
-        dangerouslySetInnerHTML={{ __html: doc.content }}
-      />
-    </main>
+          <h2 className="text-lg text-center text-gray-800 dark:text-gray-300 mt-2">
+            {doc.data.description}
+          </h2>
+
+          <Markdown html={doc.content} />
+        </article>
+      </main>
+    </>
   );
 }

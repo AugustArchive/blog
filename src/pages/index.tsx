@@ -1,6 +1,6 @@
-/**
+/*
  * 🌌 @noel/blog: a blog to jot down feelings, i guess.
- * Copyright (c) 2021 Noel <cutie@floofy.dev>
+ * Copyright (c) 2021-2022 Noel <cutie@floofy.dev>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,13 +16,10 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import { faDiscord, faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { getAllPages, MarkdownDocument } from '../lib/docs';
 import type { GetStaticProps } from 'next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCalendar } from '@fortawesome/free-solid-svg-icons';
+import { FaCalendar } from 'react-icons/fa';
 import { DateTime } from 'luxon';
-import { library } from '@fortawesome/fontawesome-svg-core';
 import slugify from 'slugify';
 import Image from 'next/image';
 import Head from 'next/head';
@@ -31,7 +28,6 @@ interface MainPageProps {
   documents: MarkdownDocument[];
 }
 
-library.add(faDiscord, faGithub, faTwitter, faCalendar);
 export const getStaticProps: GetStaticProps<MainPageProps> = async () => {
   const documents = await getAllPages();
   return {
@@ -56,23 +52,38 @@ export default function MainPage({ documents }: MainPageProps) {
         <title>🌌 noel's blog</title>
         <meta name="description" content="🌌 noel's blog - to jot down feelings." />
         <meta name="theme-color" content="#E2A8CA" />
-        <meta property="og:description" content="🌌 welcome to noel's blog. enjoy your stay! ~ヾ(・ω・)" />
+        <meta
+          property="og:description"
+          content="🌌 welcome to noel's blog. enjoy your stay! ~ヾ(・ω・)"
+        />
         <meta property="og:title" content="noel's blog 💜" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://b.floof.gay" />
       </Head>
 
-      <div className="flex container mx-auto items-center justify-center  mt-6 flex-col">
-        <Image src="/icon.png" width="175px" height="175px" className="avatar" draggable="false" />
-        <h1 className="font-cantarell font-semibold text-xl lg:text-3xl mt-2">Noel's Blog</h1>
-        <h2 className="fix-width">
-          Welcome to my blog. Enjoy your stay. While you're here, might recommend reading the last 10 blog posts?
+      <div className="flex container mx-auto items-center justify-center mt-6 flex-col py-10">
+        <Image
+          src="/icon.png"
+          width="175px"
+          height="175px"
+          className="avatar"
+          draggable="false"
+        />
+        <h1 className="font-cantarell font-semibold text-xl lg:text-3xl mt-2 text-gray-800 dark:text-gray-300">
+          Noel's Blog
+        </h1>
+        <h2 className="fix-width text-gray-800 dark:text-gray-300">
+          Welcome to my blog. Enjoy your stay. While you're here, might recommend reading the
+          last 5 blog posts?
         </h2>
       </div>
 
       <div className="flex flex-col mx-auto container items-center justify-center mt-3">
-        {documents.slice(0, 10).map((doc) => (
-          <article className="blog-card" key={`article-${slugify(doc.data.title).toLowerCase()}`}>
+        {documents.slice(0, 5).map((doc) => (
+          <article
+            className="blog-card"
+            key={`article-${slugify(doc.data.title).toLowerCase()}`}
+          >
             <div className="flex flex-col justify-center p-2 lg:p-3">
               <h2 className="text-white font-inter font-semibold text-lg lg:text-2xl">
                 <a href={`/post/${slugify(doc.data.title).toLowerCase()}`}>{doc.data.title}</a>
@@ -80,12 +91,12 @@ export default function MainPage({ documents }: MainPageProps) {
             </div>
 
             <footer className="flex items-center p-2">
-              <div>
-                <FontAwesomeIcon icon={['fas', 'calendar']} color="white" />
-                <span className="pl-2 text-white">
-                  {DateTime.fromMillis(doc.data.createdAt, { zone: 'America/Phoenix' }).toFormat('DDD ttt')}
-                </span>
-              </div>
+              <FaCalendar color="white" />
+              <span className="pl-2 text-white">
+                {DateTime.fromMillis(doc.data.createdAt, {
+                  zone: 'America/Phoenix',
+                }).toFormat('DDD ttt')}
+              </span>
             </footer>
           </article>
         ))}
