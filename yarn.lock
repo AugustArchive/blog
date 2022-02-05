@@ -935,15 +935,15 @@
   resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.1.tgz#67e6f997085afcc919de16823217bb3efed5e85c"
   integrity sha512-GMJ8YNXvQZsVZimCvqq1wawCzTdUUmwC/1/sNMN5kx+17WnljUE2H+wgFQRonUD2jpiwXCiinxxUNRw81bOh9Q==
 
-"@fontsource/inter@4.5.2":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.2.tgz#f21a1b39e9fc40fd7f315f37687ad6f6f040528a"
-  integrity sha512-4LLfZYr5dRsobtC9JNkATL5OwOqrxs2tF29eNljjogxWXm4tlHxRo4dgOFTlWxQOxcj5Zv7dM8IMiSoOqMGy3g==
+"@fontsource/inter@4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.3.tgz#56d5969c4cb9db81d9c58f667f0eb1dc8631c660"
+  integrity sha512-2PC2tEv3Qvzp6z9vDKrcxiGh6woaQB/wi5adkgLLX9bXr8rcwY/zAQGcZhhWZPal5rO5KTdAfuCTH9lwguy5ZA==
 
-"@fontsource/jetbrains-mono@4.5.1":
-  version "4.5.1"
-  resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.5.1.tgz#8ceec4a0b8794a714a99abd150cc814ea6a2a5fa"
-  integrity sha512-tRjx21UoIjRBt5WHcb0tCknx64c9F2/8Hk05jivpzL7kc7HF4AHdit0Brc/4S6F4Z4nE/SVeLHWrWx9MD9gSDQ==
+"@fontsource/jetbrains-mono@4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.5.2.tgz#f30181e875f78f39c60b3ba54937220bc95494e6"
+  integrity sha512-qjxgC4d4ghgxfcvauRzm+/lXes3Awgb3TfWSrK5U0/nCtOsLgz3XrmfMewP5ztBkBYa0YDNs+avbF0vNeS6R6w==
 
 "@headlessui/react@1.4.3":
   version "1.4.3"
