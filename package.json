@@ -23,7 +23,7 @@
     "@fontsource/cantarell": "4.5.1",
     "@fontsource/inter": "4.5.4",
     "@fontsource/jetbrains-mono": "4.5.3",
-    "@headlessui/react": "1.4.3",
+    "@headlessui/react": "1.5.0",
     "@tailwindcss/typography": "0.5.2",
     "autoprefixer": "10.4.2",
     "gray-matter": "4.0.3",
