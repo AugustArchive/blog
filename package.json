@@ -28,7 +28,7 @@
     "autoprefixer": "10.4.2",
     "gray-matter": "4.0.3",
     "lru-cache": "7.4.0",
-    "luxon": "2.3.0",
+    "luxon": "2.3.1",
     "marked": "4.0.12",
     "next": "12.1.0",
     "next-pwa": "5.4.4",
