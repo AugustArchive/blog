@@ -3454,10 +3454,10 @@ loose-envify@^1.1.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
-lru-cache@7.6.0:
-  version "7.6.0"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.6.0.tgz#33c9a9815ce6e4c0e2d5d151f6a28400770e7ce0"
-  integrity sha512-zjOf6cyMI7rcN+5MtLsT4GnDjc6D9XHi8kYcsfXTqWC+yLdSiU3/jtEPX9wZE77+XLtnmdIWu3+291hkizfH+Q==
+lru-cache@7.7.0:
+  version "7.7.0"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.7.0.tgz#8ce6eeb1b553660a99edb3ff832cecceaeeece17"
+  integrity sha512-3W9Irr9YR2ZHJbfRr/hj8VtzqH7DugwWyHONyDByP6PLS/YJV7GTX5dDYS+qFe/LkVfnCjtk6vkVsxxKGol6jQ==
 
 lru-cache@^6.0.0:
   version "6.0.0"
