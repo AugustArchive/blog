@@ -50,7 +50,7 @@
     "@nuxt/types": "2.15.8",
     "@types/lru-cache": "7.5.0",
     "@types/luxon": "2.3.1",
-    "@types/marked": "4.0.2",
+    "@types/marked": "4.0.3",
     "@types/node": "16.11.26",
     "@types/react": "17.0.41",
     "@types/twemoji": "12.1.2",
