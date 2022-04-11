@@ -29,7 +29,7 @@
     "gray-matter": "4.0.3",
     "lru-cache": "7.8.1",
     "luxon": "2.3.1",
-    "marked": "4.0.13",
+    "marked": "4.0.14",
     "next": "12.1.4",
     "next-pwa": "5.5.0",
     "postcss-scss": "4.0.3",
