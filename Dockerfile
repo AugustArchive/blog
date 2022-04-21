@@ -1,4 +1,4 @@
-FROM node:17-alpine
+FROM node:18-alpine
 
 LABEL MAINTAINER="Noel <cutie@floofy.dev>"
 RUN apk update && apk add --no-cache git ca-certificates make gcc g++ bash
