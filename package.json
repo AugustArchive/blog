@@ -27,7 +27,7 @@
     "@tailwindcss/typography": "0.5.2",
     "autoprefixer": "10.4.5",
     "gray-matter": "4.0.3",
-    "lru-cache": "7.8.1",
+    "lru-cache": "7.9.0",
     "luxon": "2.3.2",
     "marked": "4.0.14",
     "next": "12.1.5",
