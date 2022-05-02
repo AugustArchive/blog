@@ -1293,10 +1293,10 @@
   resolved "https://registry.yarnpkg.com/@types/lru-cache/-/lru-cache-7.6.1.tgz#99809260ef1e870b8ef2ab3a625784a33cec5ba9"
   integrity sha512-69x+Dhrm2aShFkTqUuPgUXbKYwvq4FH/DVeeQH7MBfTjbKjPX51NGLERxVV1vf33N71dzLvXCko4OLqRvsq53Q==
 
-"@types/luxon@2.3.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-2.3.1.tgz#e34763178b46232e4c5f079f1706e18692415519"
-  integrity sha512-nAPUltOT28fal2eDZz8yyzNhBjHw1NEymFBP7Q9iCShqpflWPybxHbD7pw/46jQmT+HXOy1QN5hNTms8MOTlOQ==
+"@types/luxon@2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-2.3.2.tgz#8a3f2cdd4858ce698b56cd8597d9243b8e9d3c65"
+  integrity sha512-WOehptuhKIXukSUUkRgGbj2c997Uv/iUgYgII8U7XLJqq9W2oF0kQ6frEznRQbdurioz+L/cdaIm4GutTQfgmA==
 
 "@types/marked@4.0.3":
   version "4.0.3"
