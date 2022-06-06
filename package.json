@@ -42,7 +42,7 @@
     "slugify": "1.6.5",
     "tailwindcss": "3.0.24",
     "twemoji": "14.0.2",
-    "xss": "1.0.12"
+    "xss": "1.0.13"
   },
   "devDependencies": {
     "@augu/eslint-config": "2.2.0",
