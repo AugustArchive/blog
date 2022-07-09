@@ -30,7 +30,7 @@
     "lru-cache": "7.12.0",
     "luxon": "2.4.0",
     "marked": "4.0.17",
-    "next": "12.2.1",
+    "next": "12.2.2",
     "next-pwa": "5.5.4",
     "postcss-scss": "4.0.4",
     "react": "18.2.0",
