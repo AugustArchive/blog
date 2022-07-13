@@ -51,7 +51,7 @@
     "@types/lru-cache": "7.10.9",
     "@types/luxon": "2.3.2",
     "@types/marked": "4.0.3",
-    "@types/node": "16.11.43",
+    "@types/node": "16.11.44",
     "@types/react": "18.0.15",
     "@types/twemoji": "13.1.1",
     "@typescript-eslint/eslint-plugin": "5.30.6",
