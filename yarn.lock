@@ -935,20 +935,20 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@fontsource/cantarell@4.5.7":
-  version "4.5.7"
-  resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.7.tgz#86e9f379eb697a8cc7493defed7707dd7273da34"
-  integrity sha512-EmPzQzy5udLCVIdRR7RsN5fG4O1eBp6cMvOhQ1GHOE4f9b3uyLaxPIcFS19mStLoidQ5JiZocGSj/4Z0q9TWIA==
+"@fontsource/cantarell@4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.8.tgz#8b4c65c61866228ced20a51d71cee9d1c2303786"
+  integrity sha512-eb3bLYjFsCOXls3zeSHCkraY255cKzjoKohsbYzqmAGLefAtZ7e0Y2Fq9HNK0PyU4ygBtv/0YLmUkP/YLhfqog==
 
-"@fontsource/inter@4.5.11":
-  version "4.5.11"
-  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.11.tgz#3c45014821e8c82b247a291f1944dd2764a2d1ed"
-  integrity sha512-toizzQkfXL8YJcG/f8j3EYXYGQe4OxiDEItThSigvHU+cYNDw8HPp3wLYQX745hddsnHqOGCM4exitFSBOU8+w==
+"@fontsource/inter@4.5.12":
+  version "4.5.12"
+  resolved "https://registry.yarnpkg.com/@fontsource/inter/-/inter-4.5.12.tgz#a6236379bf710658db048d7087ec588754962cb6"
+  integrity sha512-bGKk4/8tube/nCk8hav0ZDBVbzJzc7m0Vt4xF5p15IN4YImwGdtKG38Oq5bU8xHNS+VfvbFFCepgQNj7Pr/Lvg==
 
-"@fontsource/jetbrains-mono@4.5.9":
-  version "4.5.9"
-  resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.5.9.tgz#792bcd574f42a0602cc04bfef39e11058d0ca217"
-  integrity sha512-qgzRg1dYIPyAOTp1XR6RkDOlNt4o6LVAe9PXR68hQzbwd1xf0S86TWEzNFSL82do8weF/G2ubo4TGxrNKo9D1A==
+"@fontsource/jetbrains-mono@4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/jetbrains-mono/-/jetbrains-mono-4.5.10.tgz#c237505aeea535cf6ce1462c4ea39258f0677c2b"
+  integrity sha512-dylbkBmAWL0fkjDpDoDbQCwTQ/W3DzLtVXmwGyAyttfKliPGSP2WpAmmMFYp9NpqFMF7CLprFyzppe8u39Orkw==
 
 "@headlessui/react@1.6.6":
   version "1.6.6"
