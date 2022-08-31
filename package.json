@@ -45,7 +45,7 @@
     "xss": "1.0.14"
   },
   "devDependencies": {
-    "@augu/eslint-config": "2.2.0",
+    "@augu/eslint-config": "3.0.0",
     "@augu/tsconfig": "1.1.1",
     "@nuxt/types": "2.15.8",
     "@types/lru-cache": "7.10.9",
