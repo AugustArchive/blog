@@ -52,7 +52,7 @@
     "@types/luxon": "3.0.1",
     "@types/marked": "4.0.7",
     "@types/node": "16.11.58",
-    "@types/react": "18.0.19",
+    "@types/react": "18.0.20",
     "@types/twemoji": "13.1.1",
     "@typescript-eslint/eslint-plugin": "5.37.0",
     "@typescript-eslint/parser": "5.37.0",
