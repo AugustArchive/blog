@@ -56,7 +56,7 @@
     "@types/twemoji": "13.1.1",
     "@typescript-eslint/eslint-plugin": "5.40.1",
     "@typescript-eslint/parser": "5.40.1",
-    "eslint": "8.25.0",
+    "eslint": "8.26.0",
     "eslint-config-prettier": "8.5.0",
     "postcss": "8.4.18",
     "postcss-reporter": "7.0.5",
