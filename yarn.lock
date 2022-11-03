@@ -1335,10 +1335,10 @@
   dependencies:
     lru-cache "*"
 
-"@types/luxon@3.0.2":
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-3.0.2.tgz#11361eb3c8a81e9b8d6b35b6ffe155e8eb95480d"
-  integrity sha512-HM2OVWckUMmXbWYZufmWT2XMURGDZ6XbyNyQ+Lx+gCFGFqbZaIjsz7b+AGeGP/AuVYHBiuGY+wXfweP1RremnA==
+"@types/luxon@3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-3.0.3.tgz#698bf70d994a644b818241ea11c8f9e9e16af556"
+  integrity sha512-oHbqYmoYCihi5S09sdtf/sHh27+msnQ6qhrXJDFpUy/M7ohWcSpqNN5Mi22A2WHCsJ4ypD3zyJbCpyxvfC+VVw==
 
 "@types/marked@4.0.7":
   version "4.0.7"
