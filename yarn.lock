@@ -932,10 +932,10 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@fontsource/cantarell@4.5.9":
-  version "4.5.9"
-  resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.9.tgz#869bb07ba2201744140c20c0c208ee091062802f"
-  integrity sha512-VFHB1a11Ck0QcagsQN9H41VNY3OIPGRqyPQDLVZunXZb+Pj+TR9ugEqPoKYx1C2mbJM8uP02zuFx2LDhlnpjgQ==
+"@fontsource/cantarell@4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/cantarell/-/cantarell-4.5.10.tgz#b77fb6ed1fd0e7e032dcf3fc59cd172dbf3e0aab"
+  integrity sha512-qZ3ojYsTwCZyGqdlxijqITQdi+WGvdcpV4toZdCoAeBE3/1MUc7ChPbTTUNSgWUbB7RaBRTxIFMLxXlZbEmG7Q==
 
 "@fontsource/inter@4.5.14":
   version "4.5.14"
