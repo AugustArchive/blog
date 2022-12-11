@@ -58,7 +58,7 @@
     "@typescript-eslint/parser": "5.46.0",
     "eslint": "8.29.0",
     "eslint-config-prettier": "8.5.0",
-    "postcss": "8.4.19",
+    "postcss": "8.4.20",
     "postcss-reporter": "7.0.5",
     "prettier": "2.8.1",
     "stylelint": "14.16.0",
